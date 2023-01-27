@@ -11,23 +11,31 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    public float Variable = 0.01f;
     void Update()
     {
-        if(Input.GetKey(KeyCode.W))
+        
+        
+
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, 0, 0.01f);
+            transform.position += new Vector3(0, 0, Variable);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(0.01f, 0, 0);
+            transform.position += new Vector3(Variable, 0, 0);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += new Vector3(0, 0, -0.01f);
+            transform.position += new Vector3(0, 0, -Variable);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += new Vector3(-0.01f, 0, 0);
+            transform.position += new Vector3(-Variable, 0, 0);
         }
+
+        
+
+
     }
 }
